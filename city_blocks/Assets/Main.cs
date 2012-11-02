@@ -10,6 +10,9 @@ public class Main : MonoBehaviour {
 	private float CamRot = 45.0f;
 	private float CamRotTarget = 45.0f;
 	private bool CamTurning = false;
+	private float CamRotSpeed = 20.0f;
+	
+	private float charSpeed = 5.0f;
 	
 	// Use this for initialization
 	void Start () 
@@ -30,28 +33,66 @@ public class Main : MonoBehaviour {
 	void Update () 
 	{
 		handleInput();
+		
+		if (CamTurning)
+		{
+			if (CamRot < CamRotTarget)
+			{
+				CamRot += CamRotSpeed * Time.deltaTime;
+			}
+			else
+			{
+				CamRot -= CamRotSpeed * Time.deltaTime;
+			}
+				
+			if (Mathf.Abs (CamRot - CamRotTarget) < 0.1)
+			{
+				CamRot = CamRotTarget;
+				CamTurning = false;
+			}
+			
+			root.transform.rotation = Quaternion.Euler(0, CamRot, 0);
+			
+		}
 	}
 	
 	private void handleInput()
 	{
 		Vector3 pos = pc.transform.position;
 		// pos.x += 0.1f;
+		
+		if (CamTurning)
+		{
+			return;
+		}
+		
+		if (Input.GetKey (KeyCode.Q))
+		{
+			CamRotTarget -= 90.0f;
+			CamTurning = true;
+		}
+		else if (Input.GetKey(KeyCode.E))
+		{
+			CamRotTarget += 90.0f;
+			CamTurning = true;
+		}			
+		
 		if (Input.GetKey("up"))
 		{
-			pos.z += 0.1f;
+			pos.z += charSpeed * Time.deltaTime;
 		}
 		else if (Input.GetKey ("down"))
 		{
-			pos.z -= 0.1f;
+			pos.z -= charSpeed * Time.deltaTime;
 		}
 		
 		if (Input.GetKey("left"))
 		{
-			pos.x -= 0.1f;
+			pos.x -= charSpeed * Time.deltaTime;
 		}
 		else if (Input.GetKey("right"))
 		{
-			pos.x += 0.1f;
+			pos.x += charSpeed * Time.deltaTime;
 		}
 		
 		
