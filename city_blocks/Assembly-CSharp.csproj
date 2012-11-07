@@ -48,13 +48,12 @@
      <Compile Include="Assets\Main.cs" />
      <Compile Include="Assets\Tetra.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
- <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
- <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

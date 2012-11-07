@@ -1,11 +1,11 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}"
+# Visual Studio 2008
+
+Project("{F3FB3EAE-1984-4B4D-A4E3-B01591BADCBE}") = "city_blocks", "Assembly-CSharp-firstpass.csproj", "{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cityblocks", "cityblocks.csproj", "{90715EF2-0EE6-1758-CB23-9EE401152275}"
+Project("{F3FB3EAE-1984-4B4D-A4E3-B01591BADCBE}") = "city_blocks", "Assembly-CSharp.csproj", "{90715EF2-0EE6-1758-CB23-9EE401152275}"
 EndProject
-Project("{b955b5aa-9c1c-4cd6-9a10-9e34431be3eb}") = "Assembly-UnityScript-firstpass", "Assembly-UnityScript-firstpass.unityproj", "{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}"
+Project("{F3FB3EAE-1984-4B4D-A4E3-B01591BADCBE}") = "city_blocks", "Assembly-UnityScript-firstpass.unityproj", "{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90715EF2-0EE6-1758-CB23-9EE401152275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90715EF2-0EE6-1758-CB23-9EE401152275}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90715EF2-0EE6-1758-CB23-9EE401152275}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90715EF2-0EE6-1758-CB23-9EE401152275}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D328184-F3D5-F5E1-DCE3-8E4151F7BB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90715EF2-0EE6-1758-CB23-9EE401152275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90715EF2-0EE6-1758-CB23-9EE401152275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90715EF2-0EE6-1758-CB23-9EE401152275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90715EF2-0EE6-1758-CB23-9EE401152275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DC567D-D95A-7D46-4BA7-68D90DC3F03C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = cityblocks.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -44,7 +47,5 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
+
 EndGlobal

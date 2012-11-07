@@ -10,14 +10,13 @@ public class Main : MonoBehaviour {
 	private float CamRot = 45.0f;
 	private float CamRotTarget = 45.0f;
 	private bool CamTurning = false;
-	private float CamRotSpeed = 20.0f;
+	private float CamRotSpeed = 50.0f;
 	
 	private float charSpeed = 5.0f;
 	
 	// Use this for initialization
 	void Start () 
 	{		
-		block = new Block(23);
 	
 		pc = GameObject.Find ("Character");
 		root = GameObject.Find ("Root");
@@ -27,6 +26,10 @@ public class Main : MonoBehaviour {
 		{
 			Debug.Log ("Missing asset");
 		}
+		
+		block = new Block(23);
+		
+		// Tetra t = new Tetra();
 	}
 	
 	// Update is called once per frame
@@ -45,7 +48,7 @@ public class Main : MonoBehaviour {
 				CamRot -= CamRotSpeed * Time.deltaTime;
 			}
 				
-			if (Mathf.Abs (CamRot - CamRotTarget) < 0.1)
+			if (Mathf.Abs (CamRot - CamRotTarget) < 1)
 			{
 				CamRot = CamRotTarget;
 				CamTurning = false;
@@ -95,6 +98,7 @@ public class Main : MonoBehaviour {
 			pos.x += charSpeed * Time.deltaTime;
 		}
 		
+		pos.y = block.getHeightAt(pos.x, pos.z) + 0.55f;
 		
 		pc.transform.position = pos;
 		
