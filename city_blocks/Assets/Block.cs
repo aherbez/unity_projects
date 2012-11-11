@@ -29,7 +29,7 @@ public class Block
 	public Block (int _seed)
 	{
 		this.seed = _seed;
-		this.samples = 5;
+		this.samples = 11;
 		this.width = 100.0f;
 		
 		
@@ -53,7 +53,8 @@ public class Block
 		mf.mesh = this.geo;
 		mr.renderer.material.color = Color.green;
 	
-		generateMesh();		
+		generateMesh();	
+		makeTrees();
 	}
 
 	public float getHeightAt(float x, float z)
@@ -216,6 +217,11 @@ public class Block
 		this.geo.RecalculateBounds();		
 		// this.geo.RecalculateNormals();
 		this.geo.Optimize();
+		
+	}
+	
+	private void makeTrees()
+	{
 		
 	}
 	
