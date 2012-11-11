@@ -47,6 +47,7 @@
      <Compile Include="Assets\Block.cs" />
      <Compile Include="Assets\Main.cs" />
      <Compile Include="Assets\Tetra.cs" />
+     <Compile Include="Assets\Tree.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
