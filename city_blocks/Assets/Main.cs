@@ -28,10 +28,7 @@ public class Main : MonoBehaviour {
 		}
 		
 		block = new Block(23);
-		
-		Tree t = new Tree(20);
-		t.transform.position = new Vector3(0, 2, 0);
-		
+				
 		// Tetra t = new Tetra();
 	}
 	

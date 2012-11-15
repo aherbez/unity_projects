@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
@@ -18,6 +19,10 @@ public class Block
 	
 	private Vector3[] verts;
 	private int[] faces;
+	
+	private int TREE_MAX = 10;
+	
+	private List<Tree> Trees;
 	
 	public Transform transform {
 		
@@ -53,6 +58,8 @@ public class Block
 		mf.mesh = this.geo;
 		mr.renderer.material.color = Color.green;
 	
+		Trees = new List<Tree>();
+		
 		generateMesh();	
 		makeTrees();
 	}
@@ -222,7 +229,22 @@ public class Block
 	
 	private void makeTrees()
 	{
-		
+		Vector3 pos;
+		for (int i=0; i < this.TREE_MAX; i++)
+		{
+			Trees.Add (new Tree(20));
+			pos = newGroundPos ();
+			pos.y = 10f;
+			Trees[i].transform.position = pos;
+		}
+	}
+	
+	public Vector3 newGroundPos()
+	{
+		float x = UnityEngine.Random.Range(0f, this.width) - (this.width/2);
+		float z = UnityEngine.Random.Range(0f, this.width) - (this.width/2);
+
+		return new UnityEngine.Vector3(x, getHeightAt(x,z), z);
 	}
 	
 	private int getVertIndex(int i, int j)
